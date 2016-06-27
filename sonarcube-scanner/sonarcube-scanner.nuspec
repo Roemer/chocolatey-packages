@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>sonarcube-scanner</id>
+    <version>2.6.1</version>
+    <packageSourceUrl>https://github.com/Roemer/Chocolatey-Packages</packageSourceUrl>
+    <owners>Roemer</owners>
+    <title>SonarQube Scanner</title>
+    <authors>Roemer</authors>
+    <projectUrl>http://www.sonarqube.org/</projectUrl>
+    <copyright>2008-2015, SonarSource S.A, Switzerland</copyright>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/SonarSource/sonar-scanner-cli</projectSourceUrl>
+    <docsUrl>http://docs.sonarqube.org/display/SONAR/Analyzing+with+SonarQube+Scanner</docsUrl>
+    <bugTrackerUrl>http://jira.sonarsource.com/browse/SQSCANNER</bugTrackerUrl>
+    <tags>sonar sonarqube scanner runner</tags>
+    <summary>Official SonarQube Scanner used to start code analysis.</summary>
+    <description>Official SonarQube Scanner used to start code analysis.</description>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
