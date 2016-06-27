@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>OpenCover</id>
+    <version>4.6.519</version>
+    <packageSourceUrl>https://github.com/Roemer/Chocolatey-Packages</packageSourceUrl>
+    <owners>Roemer</owners>
+    <authors>Roemer</authors>
+    <title>OpenCover Code Coverage</title>
+    <projectUrl>https://github.com/OpenCover/opencover</projectUrl>
+    <licenseUrl>https://github.com/OpenCover/opencover/blob/master/License.md</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/OpenCover/opencover</projectSourceUrl>
+    <docsUrl>https://github.com/OpenCover/opencover/wiki</docsUrl>
+    <bugTrackerUrl>https://github.com/OpenCover/opencover/issues</bugTrackerUrl>
+    <tags>opencover coverage</tags>
+    <summary>A code coverage tool for .NET 2 and above, support for 32 and 64 processes with both branch and sequence points; roots proudly based in PartCover 
+http://scubamunki.blogspot.com/</summary>
+    <description>A code coverage tool for .NET 2 and above, support for 32 and 64 processes with both branch and sequence points; roots proudly based in PartCover
+http://scubamunki.blogspot.com/</description>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

@@ -1,1 +1,3 @@
 # Chocolatey-Packages
+### FreeRDP
+### OpenCover
