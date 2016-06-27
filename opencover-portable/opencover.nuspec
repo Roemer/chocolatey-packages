@@ -2,12 +2,12 @@
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
-    <id>opencover</id>
+    <id>opencover.portable</id>
     <version>4.6.519</version>
     <packageSourceUrl>https://github.com/Roemer/Chocolatey-Packages</packageSourceUrl>
     <owners>Roemer</owners>
     <authors>Roemer</authors>
-    <title>OpenCover Code Coverage</title>
+    <title>OpenCover Code Coverage (Portable)</title>
     <projectUrl>https://github.com/OpenCover/opencover</projectUrl>
     <licenseUrl>https://github.com/OpenCover/opencover/blob/master/License.md</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
