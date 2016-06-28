@@ -6,7 +6,7 @@
     <version>4.6.519</version>
     <packageSourceUrl>https://github.com/Roemer/Chocolatey-Packages</packageSourceUrl>
     <owners>Roemer</owners>
-    <authors>Roemer</authors>
+    <authors>OpenCover</authors>
     <title>OpenCover Code Coverage (Portable)</title>
     <projectUrl>https://github.com/OpenCover/opencover</projectUrl>
     <licenseUrl>https://github.com/OpenCover/opencover/blob/master/License.md</licenseUrl>
