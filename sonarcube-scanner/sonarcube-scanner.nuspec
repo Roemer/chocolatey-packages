@@ -4,19 +4,19 @@
   <metadata>
     <id>sonarcube-scanner</id>
     <version>2.6.1</version>
-    <packageSourceUrl>https://github.com/Roemer/Chocolatey-Packages</packageSourceUrl>
-    <owners>Roemer</owners>
     <title>SonarQube Scanner</title>
-    <authors>SonarQube</authors>
+    <summary>Official SonarQube Scanner used to start code analysis.</summary>
+    <description>Official SonarQube Scanner used to start code analysis.</description>
     <projectUrl>http://www.sonarqube.org/</projectUrl>
-    <copyright>2008-2015, SonarSource S.A, Switzerland</copyright>
-    <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/SonarSource/sonar-scanner-cli</projectSourceUrl>
     <docsUrl>http://docs.sonarqube.org/display/SONAR/Analyzing+with+SonarQube+Scanner</docsUrl>
     <bugTrackerUrl>http://jira.sonarsource.com/browse/SQSCANNER</bugTrackerUrl>
+    <copyright>2008-2015, SonarSource S.A, Switzerland</copyright>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <authors>SonarQube</authors>
+    <owners>Roemer</owners>
     <tags>sonar sonarqube scanner runner</tags>
-    <summary>Official SonarQube Scanner used to start code analysis.</summary>
-    <description>Official SonarQube Scanner used to start code analysis.</description>
+    <packageSourceUrl>https://github.com/Roemer/Chocolatey-Packages</packageSourceUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

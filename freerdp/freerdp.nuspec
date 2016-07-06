@@ -4,21 +4,21 @@
   <metadata>
     <id>freerdp</id>
     <version>1.1</version>
-    <packageSourceUrl>https://github.com/Roemer/Chocolatey-Packages</packageSourceUrl>
-    <owners>Roemer</owners>
     <title>FreeRDP (Portable)</title>
-    <authors>Marc-André Moreau</authors>
+    <summary>FreeRDP is a free implementation of the Remote Desktop Protocol (RDP).</summary>
+    <description>FreeRDP is a free implementation of the Remote Desktop Protocol (RDP), released under the Apache license. Enjoy the freedom of using your software wherever you want, the way you want it, in a world where interoperability can finally liberate your computing experience.</description>    <packageSourceUrl>https://github.com/Roemer/Chocolatey-Packages</packageSourceUrl>
     <projectUrl>http://www.freerdp.com</projectUrl>
+    <projectSourceUrl>https://github.com/FreeRDP/FreeRDP</projectSourceUrl>
+    <docsUrl>https://github.com/FreeRDP/FreeRDP/wiki</docsUrl>
+    <bugTrackerUrl>https://github.com/FreeRDP/FreeRDP/issues</bugTrackerUrl>
+    <mailingListUrl>https://lists.sourceforge.net/lists/listinfo/freerdp-devel</mailingListUrl>
     <copyright>2011-2016 FreeRDP</copyright>
     <licenseUrl>https://www.apache.org/licenses/LICENSE-2.0</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
-    <projectSourceUrl>https://github.com/FreeRDP/FreeRDP</projectSourceUrl>
-    <docsUrl>https://github.com/FreeRDP/FreeRDP/wiki</docsUrl>
-    <mailingListUrl>https://lists.sourceforge.net/lists/listinfo/freerdp-devel</mailingListUrl>
-    <bugTrackerUrl>https://github.com/FreeRDP/FreeRDP/issues</bugTrackerUrl>
+    <authors>Marc-André Moreau</authors>
+    <owners>Roemer</owners>
     <tags>freerdp rdp remote desktop</tags>
-    <summary>FreeRDP is a free implementation of the Remote Desktop Protocol (RDP).</summary>
-    <description>FreeRDP is a free implementation of the Remote Desktop Protocol (RDP), released under the Apache license. Enjoy the freedom of using your software wherever you want, the way you want it, in a world where interoperability can finally liberate your computing experience.</description>
+	<packageSourceUrl>https://github.com/Roemer/Chocolatey-Packages</packageSourceUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
