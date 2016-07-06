@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>flyway.commandline.withjre</id>
+    <version>4.0.3</version>
+    <title>Flyway, the agile database migration framework for Java</title>
+    <summary>Flyway is database-independent library for tracking, managing and applying database changes</summary>
+    <description>Flyway is database-independent library for tracking, managing and applying database changes</description>
+    <projectUrl>https://flywaydb.org/</projectUrl>
+	<projectSourceUrl>https://github.com/flyway/flyway</projectSourceUrl>
+    <docsUrl>https://flywaydb.org/documentation/</docsUrl>
+    <bugTrackerUrl>https://github.com/flyway/flyway/issues</bugTrackerUrl>
+    <copyright>2010-2016 Boxfuse GmbH</copyright>
+    <licenseUrl>http://www.apache.org/licenses/LICENSE-2.0</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>https://flywaydb.org/assets/logo/flyway-logo-tm-sm.png</iconUrl>
+    <authors>Flyway Team</authors>
+    <owners>Roemer</owners>
+    <tags>flyway database migration</tags>
+   	<packageSourceUrl>https://github.com/Roemer/Chocolatey-Packages</packageSourceUrl>
+    <releaseNotes></releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
