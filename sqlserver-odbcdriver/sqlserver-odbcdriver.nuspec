@@ -11,7 +11,7 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <authors>Microsoft</authors>
     <owners>Roemer</owners>
-    <tags>sqlserver sql odbc driver</tags>
+    <tags>sqlserver sql odbc driver admin</tags>
     <packageSourceUrl>https://github.com/Roemer/Chocolatey-Packages</packageSourceUrl>
   </metadata>
   <files>

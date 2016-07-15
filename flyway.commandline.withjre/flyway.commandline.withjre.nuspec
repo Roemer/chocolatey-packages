@@ -4,11 +4,11 @@
   <metadata>
     <id>flyway.commandline.withjre</id>
     <version>4.0.3</version>
-    <title>Flyway, the agile database migration framework for Java</title>
+    <title>Flyway</title>
     <summary>Flyway is database-independent library for tracking, managing and applying database changes</summary>
     <description>Flyway is database-independent library for tracking, managing and applying database changes</description>
     <projectUrl>https://flywaydb.org/</projectUrl>
-	<projectSourceUrl>https://github.com/flyway/flyway</projectSourceUrl>
+    <projectSourceUrl>https://github.com/flyway/flyway</projectSourceUrl>
     <docsUrl>https://flywaydb.org/documentation/</docsUrl>
     <bugTrackerUrl>https://github.com/flyway/flyway/issues</bugTrackerUrl>
     <copyright>2010-2016 Boxfuse GmbH</copyright>
@@ -18,8 +18,17 @@
     <authors>Flyway Team</authors>
     <owners>Roemer</owners>
     <tags>flyway database migration</tags>
-   	<packageSourceUrl>https://github.com/Roemer/Chocolatey-Packages</packageSourceUrl>
-    <releaseNotes></releaseNotes>
+    <packageSourceUrl>https://github.com/Roemer/Chocolatey-Packages</packageSourceUrl>
+    <releaseNotes>See all - https://flywaydb.org/documentation/releaseNotes
+
+## Flyway 4.0.3 (2016-06-17)
+
+### Bug fixes
+
+ * Issue [1313](https://github.com/flyway/flyway/issues/1313) Flyway 4.0.1 Repeatable migrations running before versioned.
+ * Issue [1339](https://github.com/flyway/flyway/pull/1339) SQLite blob literal parsing support
+ * Issue [1341](https://github.com/flyway/flyway/pull/1341) SQLite system table no drop
+    </releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
