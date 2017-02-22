@@ -3,10 +3,10 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>sqlserver-odbcdriver</id>
-    <version>13.1.811.168</version>
+    <version>13.1.4413.46</version>
     <title>Microsoft® ODBC Driver for SQL Server®</title>
-    <summary>The Microsoft ODBC Driver for SQL Server provides native connectivity from Windows to Microsoft SQL Server and Windows Azure SQL Database.</summary>
-    <description>Microsoft ODBC Driver 13.1 for SQL Server is a single dynamic-link library (DLL) containing run-time support for applications using native-code APIs to connect to Microsoft SQL Server 2005, 2008, 2008 R2, SQL Server 2012, SQL Server 2014 and Windows Azure SQL Database. Microsoft ODBC Driver 11 for SQL Server should be used to create new applications or enhance existing applications that need to take advantage of new SQL Server 2012 features. This redistributable installer for Microsoft ODBC Driver 11 for SQL Server installs the client components needed during run time to take advantage of new SQL Server 2012 features, and optionally installs the header files needed to develop an application that uses the ODBC API.</description>
+    <summary>The Microsoft ODBC Driver for SQL Server provides native connectivity from Windows + Linux to Microsoft SQL Server and Microsoft Azure SQL Database.</summary>
+    <description>Microsoft ODBC Driver for SQL Server is a single dynamic-link library (DLL) containing run-time support for applications using native-code APIs to connect to Microsoft SQL Server 2008, SQL Server 2008 R2, SQL Server 2012, SQL Server 2014, SQL Server 2016, Analytics Platform System, Azure SQL Database and Azure SQL Data Warehouse. Microsoft ODBC Driver 13 for SQL Server should be used to create new applications or enhance existing applications that need to take advantage of new SQL Server 2016 features. This redistributable installer for Microsoft ODBC Driver 13 for SQL Server installs the client components needed during run time to take advantage of new SQL Server 2016 feautres, and optionally installs the header files needed to develop an application that uses the ODBC API.</description>
     <projectUrl>https://www.microsoft.com/en-us/download/details.aspx?id=53339</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <authors>Microsoft</authors>
