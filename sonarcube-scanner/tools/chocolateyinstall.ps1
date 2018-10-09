@@ -1,8 +1,7 @@
 ﻿$packageName = 'sonarcube-scanner'
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url = 'https://sonarsource.bintray.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-3.0.3.778.zip'
+$url = 'https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-3.2.0.1227-windows.zip'
 $checksumType = 'sha256'
-$checksum = '4E3035F208548621433C8713DE5E536AA81AE1AB4DF2998E041B9236B3BA3170'
+$checksum = '5CC23EE0CB8E8B09793EEF05CFB1B091EE05265E275A89846E476E630E087E05'
 Install-ChocolateyZipPackage $packageName $url $toolsDir -Checksum $checksum -ChecksumType $checksumType
-Install-BinFile "sonar-runner" "$toolsDir\sonar-scanner-3.0.3.778\bin\sonar-runner.bat"
-Install-BinFile "sonar-scanner" "$toolsDir\sonar-scanner-3.0.3.778\bin\sonar-scanner.bat"
+Install-BinFile "sonar-scanner" "$toolsDir\sonar-scanner-3.2.0.1227-windows\bin\sonar-scanner.bat"
