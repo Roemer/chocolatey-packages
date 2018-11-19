@@ -1,8 +1,26 @@
-﻿$packageName = 'sonarcube-scanner'
-$toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url = 'https://sonarsource.bintray.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-3.0.3.778.zip'
-$checksumType = 'sha256'
-$checksum = '4E3035F208548621433C8713DE5E536AA81AE1AB4DF2998E041B9236B3BA3170'
-Install-ChocolateyZipPackage $packageName $url $toolsDir -Checksum $checksum -ChecksumType $checksumType
-Install-BinFile "sonar-runner" "$toolsDir\sonar-scanner-3.0.3.778\bin\sonar-runner.bat"
-Install-BinFile "sonar-scanner" "$toolsDir\sonar-scanner-3.0.3.778\bin\sonar-scanner.bat"
+﻿$ErrorActionPreference = 'Stop'
+ 
+$packageName = 'sonarcube-scanner'
+$toolsPath  = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+$installDir = "$toolsPath\sonar-scanner-3.2.0.1227-windows"
+
+# Unpack the zip file
+$packageArgs = @{
+    PackageName  = $packageName
+    File         = "$toolsPath\sonar-scanner-cli-3.2.0.1227-windows.zip"
+    Destination  = $toolsPath
+}
+Get-ChocolateyUnzip @packageArgs
+
+# Generate ignoring files to skip automatic generation of shims
+$files = Get-ChildItem "$installDir\jre\bin" -include *.exe -recurse
+foreach ($file in $files) {
+    #generate an ignore file
+    New-Item "$file.ignore" -type file -force | Out-Null
+}
+
+# Install the wanted shim
+Install-BinFile "sonar-scanner" "$installDir\bin\sonar-scanner.bat"
+
+# Remove the zip file
+Remove-Item -force "$toolsPath\*.zip" -ea 0
