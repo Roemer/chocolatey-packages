@@ -3,10 +3,10 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>nunit-console.portable</id>
-    <version>3.6.1</version>
-    <title>NUnit Console (Portable)</title>
+    <version>3.6.1.20180720</version>
+    <title>[Deprecated] NUnit Console (Portable)</title>
     <summary>NUnit Console runner and test engine</summary>
-    <description>NUnit Console runner and test engine</description>
+    <description>This package is deprecated in favour of the [NUnit 3 Console Runner](https://chocolatey.org/packages/nunit-console-runner) package released by The NUnit Organization.</description>
     <projectUrl>https://github.com/nunit/nunit-console</projectUrl>
     <projectSourceUrl>https://github.com/nunit/nunit-console</projectSourceUrl>
     <docsUrl>https://github.com/nunit/docs/wiki/Console-Command-Line</docsUrl>
@@ -18,7 +18,8 @@
     <tags>nunit console runner</tags>
     <packageSourceUrl>https://github.com/Roemer/Chocolatey-Packages</packageSourceUrl>
   </metadata>
-  <files>
-    <file src="tools\**" target="tools" />
-  </files>
+  <dependencies>
+    <dependency id="nunit-console-runner" />
+  </dependencies>
+  <files />
 </package>
