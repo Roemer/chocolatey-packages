@@ -17,9 +17,9 @@
     <owners>Roemer</owners>
     <tags>nunit console runner</tags>
     <packageSourceUrl>https://github.com/Roemer/Chocolatey-Packages</packageSourceUrl>
+    <dependencies>
+      <dependency id="nunit-console-runner" />
+    </dependencies>
   </metadata>
-  <dependencies>
-    <dependency id="nunit-console-runner" />
-  </dependencies>
   <files />
 </package>
