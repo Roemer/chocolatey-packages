@@ -11,7 +11,7 @@
     <projectSourceUrl>https://github.com/flyway/flyway</projectSourceUrl>
     <docsUrl>https://flywaydb.org/documentation/</docsUrl>
     <bugTrackerUrl>https://github.com/flyway/flyway/issues</bugTrackerUrl>
-    <copyright>2010-2016 Boxfuse GmbH</copyright>
+    <copyright>2010-2018 Boxfuse GmbH</copyright>
     <licenseUrl>http://www.apache.org/licenses/LICENSE-2.0</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://flywaydb.org/assets/logo/flyway-logo-tm-sm.png</iconUrl>
