@@ -1,1 +1,4 @@
-*.nupkg
+.cake/*
+!.cake/packages.config
+
+.nuget/
