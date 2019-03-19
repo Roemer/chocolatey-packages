@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>sqlserver-cmdlineutils</id>
-    <version>14.0</version>
+    <version>15.0.1300.359</version>
     <title>Microsoft® Command Line Utilities for SQL Server®</title>
     <summary>Command-Line Utilities for Microsoft SQL Server.</summary>
     <description>The SQLCMD utility allows users to connect to, send Transact-SQL batches from, and output rowset information from SQL Server instances. The bcp utility bulk copies data between an instance of Microsoft SQL Server and a data file in a user-specified format. The bcp utility can be used to import large numbers of new rows into SQL Server tables or to export data out of tables into data files.</description>
@@ -15,10 +15,12 @@
     <tags>sqlserver sql sqlcmd commandline utilities</tags>
     <packageSourceUrl>https://github.com/Roemer/Chocolatey-Packages</packageSourceUrl>
     <dependencies>
-      <dependency id="sqlserver-odbcdriver" version="13.1.811.168" />
+      <dependency id="sqlserver-odbcdriver" version="17.3.1.1" />
     </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
+    <file src="legal\VERIFICATION.txt" target="tools"/>
+    <file src="installers\**" target="tools"/>
   </files>
 </package>

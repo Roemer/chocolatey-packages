@@ -3,3 +3,4 @@
 
 .nuget/
 sqlserver-odbcdriver/installers/*
+sqlserver-cmdlineutils/installers/*

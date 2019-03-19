@@ -47,6 +47,21 @@ Task("Pack-SqlServer-ODBC")
    ChocolateyPack("./sqlserver-odbcdriver/sqlserver-odbcdriver.nuspec", chocolateyPackSettings);
 });
 
+Task("Pack-SqlServer-Sqlcmd")
+   .Does(() =>
+{
+   var instDir = Directory("sqlserver-cmdlineutils") + Directory("installers");
+   CleanDirectory(instDir);
+
+   var outputPath = instDir + File("MsSqlCmdLnUtils_x64.msi");
+   DownloadFile("https://go.microsoft.com/fwlink/?linkid=2082790", outputPath);
+
+   outputPath = instDir + File("MsSqlCmdLnUtils_x86.msi");
+   DownloadFile("https://go.microsoft.com/fwlink/?linkid=2082695", outputPath);
+  
+   ChocolateyPack("./sqlserver-cmdlineutils/sqlserver-cmdlineutils.nuspec", chocolateyPackSettings);
+});
+
 Task("Default")
    .Does(() => {
    Information("Hello Cake!");
