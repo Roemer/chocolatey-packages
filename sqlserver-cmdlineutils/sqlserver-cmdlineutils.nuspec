@@ -7,8 +7,7 @@
     <title>Microsoft® Command Line Utilities for SQL Server®</title>
     <summary>Command-Line Utilities for Microsoft SQL Server.</summary>
     <description>The SQLCMD utility allows users to connect to, send Transact-SQL batches from, and output rowset information from SQL Server instances. The bcp utility bulk copies data between an instance of Microsoft SQL Server and a data file in a user-specified format. The bcp utility can be used to import large numbers of new rows into SQL Server tables or to export data out of tables into data files.</description>
-    <projectUrl>https://www.microsoft.com/en-us/download/details.aspx?id=53591</projectUrl>
-    <docsUrl>https://msdn.microsoft.com/en-us/library/ms180944.aspx</docsUrl>
+    <projectUrl>https://docs.microsoft.com/en-us/sql/tools/sqlcmd-utility?view=sql-server-2017</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <authors>Microsoft</authors>
     <owners>Roemer</owners>
@@ -21,6 +20,7 @@
   <files>
     <file src="tools\**" target="tools" />
     <file src="legal\VERIFICATION.txt" target="tools"/>
+    <file src="legal\LICENSE.txt" target="tools"/>
     <file src="installers\**" target="tools"/>
   </files>
 </package>
