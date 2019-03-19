@@ -1,0 +1,17 @@
+VERIFICATION
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+
+The installer have been downloaded from their official download link listed on <https://www.microsoft.com/en-us/download/details.aspx?id=56567>
+and can be verified like this:
+
+1. Download the following installers:
+  32-Bit: <https://download.microsoft.com/download/E/6/B/E6BFDC7A-5BCD-4C51-9912-635646DA801E/en-US/msodbcsql_17.3.1.1_x86.msi>
+  64-Bit: <https://download.microsoft.com/download/E/6/B/E6BFDC7A-5BCD-4C51-9912-635646DA801E/en-US/msodbcsql_17.3.1.1_x64.msi>
+2. You can use one of the following methods to obtain the checksum
+  - Use powershell function 'Get-Filehash'
+  - Use chocolatey utility 'checksum.exe'
+
+  checksum type: 
+  checksum32: B494D393CF4ADF6EBC9C317146208331CC5773DC772D47463DD4C2B49DB3EA32
+  checksum64: CDFF489DB121CEAD78F87BC33F9FDB072432D637FB9C2905D0CBDA2310F87086
