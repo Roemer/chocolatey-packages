@@ -7,67 +7,68 @@ var target = Argument("target", "Default");
 var outputDir = Directory("./.nuget");
 EnsureDirectoryExists(outputDir);
 var chocolateyPackSettings = new ChocolateyPackSettings {
-   OutputDirectory = outputDir
+    OutputDirectory = outputDir
 };
+
 ///////////////////////////////////////////////////////////////////////////////
 // TASKS
 ///////////////////////////////////////////////////////////////////////////////
 
 Task("Clean-Output")
-   .Does(() =>
+    .Does(() =>
 {
-   CleanDirectory(outputDir);
+    CleanDirectory(outputDir);
 });
 
 Task("Pack-Flyway")
-   .Does(() =>
+    .Does(() =>
 {
-   ChocolateyPack("./flyway.commandline/flyway.commandline.nuspec", chocolateyPackSettings);
-   ChocolateyPack("./flyway.commandline.withjre/flyway.commandline.withjre.nuspec", chocolateyPackSettings);
+    ChocolateyPack("./flyway.commandline/flyway.commandline.nuspec", chocolateyPackSettings);
+    ChocolateyPack("./flyway.commandline.withjre/flyway.commandline.withjre.nuspec", chocolateyPackSettings);
 });
 
 Task("Pack-FreeRDP")
-   .Does(() =>
+    .Does(() =>
 {
-   ChocolateyPack("./freerdp/freerdp.nuspec", chocolateyPackSettings);
+    ChocolateyPack("./freerdp/freerdp.nuspec", chocolateyPackSettings);
 });
 
 Task("Pack-SonarQube-Scanner")
-   .Does(() =>
+    .Does(() =>
 {
-   ChocolateyPack("./sonarqube-scanner.portable/sonarqube-scanner.portable.nuspec", chocolateyPackSettings);
+    ChocolateyPack("./sonarqube-scanner.portable/sonarqube-scanner.portable.nuspec", chocolateyPackSettings);
 });
 
 Task("Pack-SqlServer-ODBC")
-   .Does(() =>
+    .Does(() =>
 {
-   ChocolateyPack("./sqlserver-odbcdriver/sqlserver-odbcdriver.nuspec", chocolateyPackSettings);
+    ChocolateyPack("./sqlserver-odbcdriver/sqlserver-odbcdriver.nuspec", chocolateyPackSettings);
 });
 
 Task("Pack-SqlServer-Sqlcmd")
-   .Does(() =>
+    .Does(() =>
 {
-   ChocolateyPack("./sqlserver-cmdlineutils/sqlserver-cmdlineutils.nuspec", chocolateyPackSettings);
+    ChocolateyPack("./sqlserver-cmdlineutils/sqlserver-cmdlineutils.nuspec", chocolateyPackSettings);
+});
+
+Task("Push-Packages")
+    .Does(() =>
+{
+    var apiKey = System.IO.File.ReadAllText(".chocoapikey");
+
+    var files = GetFiles($"{outputDir}/*.nupkg");
+    foreach (var package in files) {
+        Information($"Pushing {package}");
+        ChocolateyPush(package, new ChocolateyPushSettings {
+            ApiKey = apiKey
+        });
+    }
 });
 
 Task("Default")
-   .Does(() => {
-   Information("Hello Cake!");
+    .Does(() =>
+{
+    Information("Hello Cake!");
 });
 
-
-Task("Push-Packages")
-   .Does(() => {
-   var apiKey = System.IO.File.ReadAllText(".chocoapikey");
-
-   var files = GetFiles($"{outputDir}/*.nupkg");
-   foreach (var package in files) {
-      Information($"Pushing {package}");
-      ChocolateyPush(package, new ChocolateyPushSettings {
-         ApiKey = apiKey
-      });
-   }
- });
-
 RunTarget(target);
-
