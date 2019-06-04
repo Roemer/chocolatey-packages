@@ -2,5 +2,3 @@
 !.cake/packages.config
 
 .nuget/
-sqlserver-odbcdriver/installers/*
-sqlserver-cmdlineutils/installers/*

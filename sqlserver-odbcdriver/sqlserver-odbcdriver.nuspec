@@ -16,8 +16,5 @@
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
-    <file src="legal\VERIFICATION.txt" target="tools"/>
-    <file src="legal\LICENSE.txt" target="tools"/>
-    <file src="installers\**" target="tools"/>
   </files>
 </package>

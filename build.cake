@@ -5,13 +5,19 @@
 var target = Argument("target", "Default");
 
 var outputDir = Directory("./.nuget");
-CleanDirectory(outputDir);
+EnsureDirectoryExists(outputDir);
 var chocolateyPackSettings = new ChocolateyPackSettings {
    OutputDirectory = outputDir
 };
 ///////////////////////////////////////////////////////////////////////////////
 // TASKS
 ///////////////////////////////////////////////////////////////////////////////
+
+Task("Clean-Output")
+   .Does(() =>
+{
+   CleanDirectory(outputDir);
+});
 
 Task("Pack-Flyway")
    .Does(() =>
@@ -35,30 +41,12 @@ Task("Pack-SonarQube-Scanner")
 Task("Pack-SqlServer-ODBC")
    .Does(() =>
 {
-   var instDir = Directory("sqlserver-odbcdriver") + Directory("installers");
-   CleanDirectory(instDir);
-
-   var outputPath = instDir + File("msodbcsql_17.3.1.1_x64.msi");
-   DownloadFile("https://download.microsoft.com/download/E/6/B/E6BFDC7A-5BCD-4C51-9912-635646DA801E/en-US/msodbcsql_17.3.1.1_x64.msi", outputPath);
-
-   outputPath = instDir + File("msodbcsql_17.3.1.1_x86.msi");
-   DownloadFile("https://download.microsoft.com/download/E/6/B/E6BFDC7A-5BCD-4C51-9912-635646DA801E/en-US/msodbcsql_17.3.1.1_x86.msi", outputPath);
-  
    ChocolateyPack("./sqlserver-odbcdriver/sqlserver-odbcdriver.nuspec", chocolateyPackSettings);
 });
 
 Task("Pack-SqlServer-Sqlcmd")
    .Does(() =>
 {
-   var instDir = Directory("sqlserver-cmdlineutils") + Directory("installers");
-   CleanDirectory(instDir);
-
-   var outputPath = instDir + File("MsSqlCmdLnUtils_x64.msi");
-   DownloadFile("https://go.microsoft.com/fwlink/?linkid=2082790", outputPath);
-
-   outputPath = instDir + File("MsSqlCmdLnUtils_x86.msi");
-   DownloadFile("https://go.microsoft.com/fwlink/?linkid=2082695", outputPath);
-  
    ChocolateyPack("./sqlserver-cmdlineutils/sqlserver-cmdlineutils.nuspec", chocolateyPackSettings);
 });
 
@@ -66,6 +54,24 @@ Task("Default")
    .Does(() => {
    Information("Hello Cake!");
 });
+
+
+Task("Push-Packages")
+   .Does(() => {
+   var apiKey = "<apiKey>;
+
+   var files = GetFiles($"{outputDir}/*.nupkg");
+   foreach (var file in files) {
+      Information($"Pushing {file}");
+   }
+   return;
+   // Get the path to the package.
+   var package = "./chocolatey/MyChocolateyPackage.0.0.1.nupkg";
+   // Push the package.
+   ChocolateyPush(package, new ChocolateyPushSettings {
+      ApiKey = apiKey
+   });
+ });
 
 RunTarget(target);
 
