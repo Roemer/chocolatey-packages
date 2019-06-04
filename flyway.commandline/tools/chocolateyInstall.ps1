@@ -1,8 +1,8 @@
-﻿$version = '5.2.4'
+﻿$version = '6.0.0-beta2'
 $packageName = 'flyway.commandline'
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url = "https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/$version/flyway-commandline-$version.zip"
 $checksumType = 'sha256'
-$checksum = '22f120619fe7b51ad9a966a0d74f94a9d7c608a23bcd09e30d68bfb46e04441a'
+$checksum = '73c38a8534dc035e7703c49c5bc234deaf09110b2151f3b4923619400273581f'
 Install-ChocolateyZipPackage $packageName $url $toolsDir -Checksum $checksum -ChecksumType $checksumType
 Install-BinFile "flyway" "$toolsDir\flyway-$version\flyway.cmd"

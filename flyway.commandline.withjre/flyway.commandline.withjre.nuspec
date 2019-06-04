@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>flyway.commandline.withjre</id>
-    <version>5.2.4</version>
+    <version>6.0.0-beta2</version>
     <title>Flyway (with JRE)</title>
     <summary>Flyway is database-independent library for tracking, managing and applying database changes</summary>
     <description>Flyway is database-independent library for tracking, managing and applying database changes</description>
