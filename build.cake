@@ -58,19 +58,15 @@ Task("Default")
 
 Task("Push-Packages")
    .Does(() => {
-   var apiKey = "<apiKey>;
+   var apiKey = System.IO.File.ReadAllText(".chocoapikey");
 
    var files = GetFiles($"{outputDir}/*.nupkg");
-   foreach (var file in files) {
-      Information($"Pushing {file}");
+   foreach (var package in files) {
+      Information($"Pushing {package}");
+      ChocolateyPush(package, new ChocolateyPushSettings {
+         ApiKey = apiKey
+      });
    }
-   return;
-   // Get the path to the package.
-   var package = "./chocolatey/MyChocolateyPackage.0.0.1.nupkg";
-   // Push the package.
-   ChocolateyPush(package, new ChocolateyPushSettings {
-      ApiKey = apiKey
-   });
  });
 
 RunTarget(target);
