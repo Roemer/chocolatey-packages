@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>flyway.commandline.withjre</id>
-    <version>6.0.0-beta2</version>
+    <version>{version}</version>
     <title>Flyway (with JRE)</title>
     <summary>Flyway is database-independent library for tracking, managing and applying database changes</summary>
     <description>Flyway is database-independent library for tracking, managing and applying database changes</description>
@@ -11,7 +11,7 @@
     <projectSourceUrl>https://github.com/flyway/flyway</projectSourceUrl>
     <docsUrl>https://flywaydb.org/documentation/</docsUrl>
     <bugTrackerUrl>https://github.com/flyway/flyway/issues</bugTrackerUrl>
-    <copyright>2010-2018 Boxfuse GmbH</copyright>
+    <copyright>2010-{year} Boxfuse GmbH</copyright>
     <licenseUrl>http://www.apache.org/licenses/LICENSE-2.0</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://flywaydb.org/assets/logo/flyway-logo-tm-sm.png</iconUrl>
