@@ -88,7 +88,21 @@ Task("Pack-SqlServer-ODBC")
     .IsDependentOn("Clean-Output")
     .Does(() =>
 {
-    ChocolateyPack("./sqlserver-odbcdriver/sqlserver-odbcdriver.nuspec", chocolateyPackSettings);
+    var version = "17.4.2.1";
+    var link32 = "https://download.microsoft.com/download/E/6/B/E6BFDC7A-5BCD-4C51-9912-635646DA801E/en-US/msodbcsql_17.4.1.1_x86.msi";
+    var link64 = "https://download.microsoft.com/download/E/6/B/E6BFDC7A-5BCD-4C51-9912-635646DA801E/en-US/msodbcsql_17.4.1.1_x64.msi";
+    var hash32 = GetOnlineFileHash(link32);
+    var hash64 = GetOnlineFileHash(link64);
+
+    var packageName = "sqlserver-odbcdriver";
+    ReplaceInFiles(packageName, new Dictionary<string, string> {
+        ["{version}"] = version,
+        ["{link32}"] = link32,
+        ["{link64}"] = link64,
+        ["{checksum32}"] = hash32,
+        ["{checksum64}"] = hash64
+    });
+    ChocolateyPack($"./{packageName}/{packageName}.nuspec", chocolateyPackSettings);
 });
 
 Task("Pack-SqlServer-Sqlcmd")
