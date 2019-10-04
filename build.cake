@@ -4,20 +4,18 @@
 
 var target = Argument("target", "Default");
 
-var outputDir = Directory("./.nuget");
-EnsureDirectoryExists(outputDir);
+var nugetDir = Directory("./.nuget");
 var chocolateyPackSettings = new ChocolateyPackSettings {
-    OutputDirectory = outputDir
+    OutputDirectory = nugetDir
 };
 
 ///////////////////////////////////////////////////////////////////////////////
 // TASKS
 ///////////////////////////////////////////////////////////////////////////////
 
-Task("Clean-Output")
-    .Does(() =>
+Setup(context =>
 {
-    CleanDirectory(outputDir);
+    CleanDirectory(nugetDir);
 });
 
 Task("Pack-Flyway")
@@ -56,7 +54,7 @@ Task("Push-Packages")
 {
     var apiKey = System.IO.File.ReadAllText(".chocoapikey");
 
-    var files = GetFiles($"{outputDir}/*.nupkg");
+    var files = GetFiles($"{nugetDir}/*.nupkg");
     foreach (var package in files) {
         Information($"Pushing {package}");
         ChocolateyPush(package, new ChocolateyPushSettings {
