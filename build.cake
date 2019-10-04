@@ -95,7 +95,21 @@ Task("Pack-SqlServer-Sqlcmd")
     .IsDependentOn("Clean-Output")
     .Does(() =>
 {
-    ChocolateyPack("./sqlserver-cmdlineutils/sqlserver-cmdlineutils.nuspec", chocolateyPackSettings);
+    var version = "15.0.1300.359";
+    var link32 = "https://download.microsoft.com/download/4/A/3/4A323490-8EC0-48AE-9F22-638AA6C508C6/EN/x86/MsSqlCmdLnUtils.msi";
+    var link64 = "https://download.microsoft.com/download/4/A/3/4A323490-8EC0-48AE-9F22-638AA6C508C6/EN/x64/MsSqlCmdLnUtils.msi";
+    var hash32 = GetOnlineFileHash(link32);
+    var hash64 = GetOnlineFileHash(link64);
+    
+    var packageName = "sqlserver-cmdlineutils";
+    ReplaceInFiles(packageName, new Dictionary<string, string> {
+        ["{version}"] = version,
+        ["{link32}"] = link32,
+        ["{link64}"] = link64,
+        ["{checksum32}"] = hash32,
+        ["{checksum64}"] = hash64
+    });
+    ChocolateyPack($"./{packageName}/{packageName}.nuspec", chocolateyPackSettings);
 });
 
 Task("Push-Packages")
