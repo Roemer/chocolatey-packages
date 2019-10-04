@@ -16,7 +16,7 @@
     <authors>SonarQube</authors>
     <owners>Roemer</owners>
     <tags>sonar sonarqube scanner runner</tags>
-    <packageSourceUrl>https://github.com/Roemer/Chocolatey-Packages</packageSourceUrl>
+    <packageSourceUrl>https://github.com/Roemer/chocolatey-packages</packageSourceUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

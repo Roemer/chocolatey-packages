@@ -12,7 +12,7 @@
     <authors>Microsoft</authors>
     <owners>Roemer</owners>
     <tags>sqlserver sql odbc driver admin</tags>
-    <packageSourceUrl>https://github.com/Roemer/Chocolatey-Packages</packageSourceUrl>
+    <packageSourceUrl>https://github.com/Roemer/chocolatey-packages</packageSourceUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

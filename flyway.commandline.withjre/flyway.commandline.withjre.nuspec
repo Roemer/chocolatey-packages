@@ -18,7 +18,7 @@
     <authors>Flyway Team</authors>
     <owners>Roemer</owners>
     <tags>flyway database migration cli</tags>
-    <packageSourceUrl>https://github.com/Roemer/Chocolatey-Packages</packageSourceUrl>
+    <packageSourceUrl>https://github.com/Roemer/chocolatey-packages</packageSourceUrl>
     <releaseNotes>https://flywaydb.org/documentation/releaseNotes</releaseNotes>
   </metadata>
   <files>
