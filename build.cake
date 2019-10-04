@@ -38,29 +38,27 @@ Task("Pack-Flyway")
 
     // Handle the file without jre
     {
-        var file = DownloadFile($"https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/{version}/flyway-commandline-{version}.zip");
-        var hash = CalculateFileHash(file, HashAlgorithm.SHA256).ToHex();
-        ReplaceInFiles(@"flyway.commandline", new Dictionary<string, string> {
+        var packageName = "flyway.commandline";
+        var hash = GetOnlineFileHash($"https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/{version}/flyway-commandline-{version}.zip");
+        ReplaceInFiles(packageName, new Dictionary<string, string> {
             ["{version}"] = version,
             ["{checksum}"] = hash,
             ["{year}"] = $"{DateTime.Now.Year}",
         });
+        ChocolateyPack($"./{packageName}/{packageName}.nuspec", chocolateyPackSettings);
     }
 
     // Handle the file with JRE
     {
-        var file = DownloadFile($"https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/{version}/flyway-commandline-{version}-windows-x64.zip");
-        var hash = CalculateFileHash(file, HashAlgorithm.SHA256).ToHex();
-        ReplaceInFiles(@"flyway.commandline.withjre", new Dictionary<string, string> {
+        var packageName = "flyway.commandline.withjre";
+        var hash = GetOnlineFileHash($"https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/{version}/flyway-commandline-{version}-windows-x64.zip");
+        ReplaceInFiles(packageName, new Dictionary<string, string> {
             ["{version}"] = version,
             ["{checksum}"] = hash,
             ["{year}"] = $"{DateTime.Now.Year}",
         });
+        ChocolateyPack($"./{packageName}/{packageName}.nuspec", chocolateyPackSettings);
     }
-
-    // Pack the files
-    ChocolateyPack("./flyway.commandline/flyway.commandline.nuspec", chocolateyPackSettings);
-    ChocolateyPack("./flyway.commandline.withjre/flyway.commandline.withjre.nuspec", chocolateyPackSettings);
 });
 
 Task("Pack-FreeRDP")
@@ -74,7 +72,16 @@ Task("Pack-SonarQube-Scanner")
     .IsDependentOn("Clean-Output")
     .Does(() =>
 {
-    ChocolateyPack("./sonarqube-scanner.portable/sonarqube-scanner.portable.nuspec", chocolateyPackSettings);
+    var version = "4.2.0.1873";
+
+    var packageName = "sonarqube-scanner.portable";
+    var hash = GetOnlineFileHash($"https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-{version}-windows.zip");
+    ReplaceInFiles(packageName, new Dictionary<string, string> {
+        ["{version}"] = version,
+        ["{checksum}"] = hash,
+        ["{year}"] = $"{DateTime.Now.Year}",
+    });
+    ChocolateyPack($"./{packageName}/{packageName}.nuspec", chocolateyPackSettings);
 });
 
 Task("Pack-SqlServer-ODBC")
@@ -112,6 +119,15 @@ Task("Default")
 });
 
 RunTarget(target);
+
+/// <summary>
+/// Downloads the given file and calculates the SHA265 hash of it.
+/// </summary>
+private string GetOnlineFileHash(string fileUrl) {
+    var file = DownloadFile(fileUrl);
+    var hash = CalculateFileHash(file, HashAlgorithm.SHA256).ToHex();
+    return hash;
+}
 
 /// <summary>
 /// Method that replaces all files in a folder with the given key/value placehoders.

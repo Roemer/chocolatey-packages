@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>sonarqube-scanner.portable</id>
-    <version>3.3.0.1492</version>
+    <version>{version}</version>
     <title>SonarQube Scanner</title>
     <summary>Official SonarQube Scanner used to start code analysis.</summary>
     <description>Official SonarQube Scanner used to start code analysis.</description>
@@ -11,7 +11,7 @@
     <projectSourceUrl>https://github.com/SonarSource/sonar-scanner-cli</projectSourceUrl>
     <docsUrl>http://docs.sonarqube.org/display/SONAR/Analyzing+with+SonarQube+Scanner</docsUrl>
     <bugTrackerUrl>http://jira.sonarsource.com/browse/SQSCANNER</bugTrackerUrl>
-    <copyright>2008-2019, SonarSource S.A, Switzerland</copyright>
+    <copyright>2008-{year}, SonarSource S.A, Switzerland</copyright>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <authors>SonarQube</authors>
     <owners>Roemer</owners>
