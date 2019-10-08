@@ -13,6 +13,9 @@
     <owners>Roemer</owners>
     <tags>sqlserver sql odbc driver admin</tags>
     <packageSourceUrl>https://github.com/Roemer/chocolatey-packages</packageSourceUrl>
+    <dependencies>
+      <dependency id="vcredist2017" />
+    </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

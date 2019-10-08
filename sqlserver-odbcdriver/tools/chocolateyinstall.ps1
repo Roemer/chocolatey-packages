@@ -1,6 +1,6 @@
 ﻿$packageName = 'sqlserver-odbcdriver'
 $installerType = 'msi'
-$silentArgs= '/Passive /NoRestart IACCEPTMSODBCSQLLICENSETERMS=YES'
+$silentArgs= '/qn /norestart IACCEPTMSODBCSQLLICENSETERMS=YES'
 $url = '{link32}'
 $url64 = '{link64}'
 $checksumType = 'sha256'
