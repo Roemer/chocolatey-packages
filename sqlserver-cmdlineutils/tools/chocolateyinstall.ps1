@@ -1,6 +1,6 @@
 ﻿$packageName = 'sqlserver-cmdlineutils'
 $installerType = 'msi'
-$silentArgs= '/Passive /NoRestart IACCEPTMSSQLCMDLNUTILSLICENSETERMS=YES'
+$silentArgs= '/qn /norestart IACCEPTMSSQLCMDLNUTILSLICENSETERMS=YES'
 $url = '{link32}'
 $url64 = '{link64}'
 $checksumType = 'sha256'
