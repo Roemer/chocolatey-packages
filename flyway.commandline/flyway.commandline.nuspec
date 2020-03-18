@@ -12,7 +12,7 @@
     <docsUrl>https://flywaydb.org/documentation/</docsUrl>
     <bugTrackerUrl>https://github.com/flyway/flyway/issues</bugTrackerUrl>
     <copyright>2010-{year} Boxfuse GmbH</copyright>
-    <licenseUrl>http://www.apache.org/licenses/LICENSE-2.0</licenseUrl>
+    <licenseUrl>https://www.apache.org/licenses/LICENSE-2.0</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://flywaydb.org/assets/logo/flyway-logo-tm-sm.png</iconUrl>
     <authors>Flyway Team</authors>
