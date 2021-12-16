@@ -34,7 +34,7 @@ Task("Pack-Flyway")
     .IsDependentOn("Clean-Output")
     .Does(() =>
 {
-    var version = "7.8.1";
+    var version = "7.15.0";
 
     // Handle the file without jre
     {
