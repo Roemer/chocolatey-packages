@@ -88,9 +88,9 @@ Task("Pack-SqlServer-ODBC")
     .IsDependentOn("Clean-Output")
     .Does(() =>
 {
-    var version = "17.7.2.1";
-    var link32 = "https://download.microsoft.com/download/2/c/c/2cc12eab-a3aa-45d6-95bb-13f968fb6cd6/en-US/17.7.2.1/x86/msodbcsql.msi";
-    var link64 = "https://download.microsoft.com/download/2/c/c/2cc12eab-a3aa-45d6-95bb-13f968fb6cd6/en-US/17.7.2.1/x64/msodbcsql.msi";
+    var version = "17.8.1.1";
+    var link32 = "https://download.microsoft.com/download/a/e/b/aeb7d4ff-ca20-45db-86b8-8a8f774ce97b/de-DE/17.8.1.1/x86/msodbcsql.msi";
+    var link64 = "https://download.microsoft.com/download/a/e/b/aeb7d4ff-ca20-45db-86b8-8a8f774ce97b/de-DE/17.8.1.1/x64/msodbcsql.msi";
     var hash32 = GetOnlineFileHash(link32);
     var hash64 = GetOnlineFileHash(link64);
 
