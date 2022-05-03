@@ -34,7 +34,7 @@ Task("Pack-Flyway")
     .IsDependentOn("Clean-Output")
     .Does(() =>
 {
-    var version = "8.3.0";
+    var version = "8.5.10";
 
     // Handle the file without jre
     {
@@ -72,7 +72,7 @@ Task("Pack-SonarQube-Scanner")
     .IsDependentOn("Clean-Output")
     .Does(() =>
 {
-    var version = "4.6.2.2472";
+    var version = "4.7.0.2747";
 
     var packageName = "sonarqube-scanner.portable";
     var hash = GetOnlineFileHash($"https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-{version}-windows.zip");
@@ -88,9 +88,9 @@ Task("Pack-SqlServer-ODBC")
     .IsDependentOn("Clean-Output")
     .Does(() =>
 {
-    var version = "17.8.1.1";
-    var link32 = "https://download.microsoft.com/download/a/e/b/aeb7d4ff-ca20-45db-86b8-8a8f774ce97b/de-DE/17.8.1.1/x86/msodbcsql.msi";
-    var link64 = "https://download.microsoft.com/download/a/e/b/aeb7d4ff-ca20-45db-86b8-8a8f774ce97b/de-DE/17.8.1.1/x64/msodbcsql.msi";
+    var version = "18.0.1.1";
+    var link32 = "https://download.microsoft.com/download/1/a/4/1a4a49b8-9fe6-4237-be0d-a6b8f2d559b5/de-DE/18.0.1.1/x86/msodbcsql.msi";
+    var link64 = "https://download.microsoft.com/download/1/a/4/1a4a49b8-9fe6-4237-be0d-a6b8f2d559b5/de-DE/18.0.1.1/x64/msodbcsql.msi";
     var hash32 = GetOnlineFileHash(link32);
     var hash64 = GetOnlineFileHash(link64);
 
