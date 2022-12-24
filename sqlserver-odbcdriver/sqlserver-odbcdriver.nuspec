@@ -5,9 +5,12 @@
     <id>sqlserver-odbcdriver</id>
     <version>{version}</version>
     <title>Microsoft® ODBC Driver for SQL Server®</title>
-    <summary>The Microsoft ODBC Driver for SQL Server provides native connectivity from Windows, Linux, &amp; macOS to Microsoft SQL Server and Microsoft Azure SQL Database.</summary>
-    <description>Microsoft ODBC Driver 17 for SQL Server is a single dynamic-link library (DLL) containing run-time support for applications using native-code APIs to connect to Microsoft SQL Server 2008, SQL Server 2008 R2, SQL Server 2012, SQL Server 2014, SQL Server 2016, SQL Server 2017, Analytics Platform System, Azure SQL Database and Azure SQL Data Warehouse. Microsoft ODBC Driver 17 for SQL Server should be used to create new applications or enhance existing applications that need to take advantage of newer SQL Server features. This redistributable installer for Microsoft ODBC Driver 17 for SQL Server installs the client components needed during run time to take advantage of newer SQL Server features, and optionally installs the header files needed to develop an application that uses the ODBC API.</description>
-    <projectUrl>https://www.microsoft.com/en-us/download/details.aspx?id=56567</projectUrl>
+    <summary>Microsoft ODBC Driver for SQL Server is a single dynamic-link library (DLL) containing run-time support for applications using native-code APIs to connect to SQL Server.</summary>
+    <description>The Microsoft ODBC Drivers for SQL Server are stand-alone ODBC drivers which provide an application programming interface (API) implementing the standard ODBC interfaces to Microsoft SQL Server.
+
+The Microsoft ODBC Driver for SQL Server can be used to create new applications. You can also upgrade your older applications which currently use an older ODBC driver. The ODBC Driver for SQL Server supports connections to Azure SQL Database, Azure Synapse Analytics, and SQL Server.</description>
+    <projectUrl>https://learn.microsoft.com/en-us/sql/connect/odbc/microsoft-odbc-driver-for-sql-server</projectUrl>
+    <releaseNotes>See https://learn.microsoft.com/en-us/sql/connect/odbc/windows/release-notes-odbc-sql-server-windows.</releaseNotes>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <authors>Microsoft</authors>
     <owners>Roemer</owners>
