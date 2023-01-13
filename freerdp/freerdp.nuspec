@@ -3,10 +3,14 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>freerdp</id>
-    <version>1.1</version>
-    <title>FreeRDP (Portable)</title>
+    <version>1.1.20230113</version>
+    <title>FreeRDP (Stable)</title>
     <summary>FreeRDP is a free implementation of the Remote Desktop Protocol (RDP).</summary>
-    <description>FreeRDP is a free implementation of the Remote Desktop Protocol (RDP), released under the Apache license. Enjoy the freedom of using your software wherever you want, the way you want it, in a world where interoperability can finally liberate your computing experience.</description>
+    <description>FreeRDP is a free implementation of the Remote Desktop Protocol (RDP), released under the Apache license. Enjoy the freedom of using your software wherever you want, the way you want it, in a world where interoperability can finally liberate your computing experience.
+
+## Notes
+* This is the latest stable version of `freerdp`. Nightly builds are available in the [`freerdp.portable`](https://community.chocolatey.org/packages/freerdp.portable) package.
+    </description>
     <projectUrl>http://www.freerdp.com</projectUrl>
     <projectSourceUrl>https://github.com/FreeRDP/FreeRDP</projectSourceUrl>
     <docsUrl>https://github.com/FreeRDP/FreeRDP/wiki</docsUrl>
