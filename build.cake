@@ -34,7 +34,7 @@ Task("Pack-Flyway")
     .IsDependentOn("Clean-Output")
     .Does(() =>
 {
-    var version = "9.11.0";
+    var version = "9.17.0";
 
     // Handle the file without jre
     {
@@ -89,9 +89,9 @@ Task("Pack-SqlServer-ODBC")
     .Does(() =>
 {
     // see https://learn.microsoft.com/en-us/sql/connect/odbc/download-odbc-driver-for-sql-server?view=sql-server-ver16
-    var version = "18.1.2.1";
-    var link32 = "https://download.microsoft.com/download/9/1/f/91fc3f67-34bd-44c7-9431-be5919dc8377/en-US/18.1.2.1/x86/msodbcsql.msi";
-    var link64 = "https://download.microsoft.com/download/9/1/f/91fc3f67-34bd-44c7-9431-be5919dc8377/en-US/18.1.2.1/x64/msodbcsql.msi";
+    var version = "18.2.1.1";
+    var link32 = "https://download.microsoft.com/download/c/5/4/c54c2bf1-87d0-4f6f-b837-b78d34d4d28a/en-US/18.2.1.1/x86/msodbcsql.msi";
+    var link64 = "https://download.microsoft.com/download/c/5/4/c54c2bf1-87d0-4f6f-b837-b78d34d4d28a/en-US/18.2.1.1/x64/msodbcsql.msi";
     var hash32 = GetOnlineFileHash(link32);
     var hash64 = GetOnlineFileHash(link64);
 
@@ -110,9 +110,9 @@ Task("Pack-SqlServer-Sqlcmd")
     .IsDependentOn("Clean-Output")
     .Does(() =>
 {
-    var version = "15.0.2000.5";
-    var link32 = "https://download.microsoft.com/download/0/e/6/0e63d835-3513-45a0-9cf0-0bc75fb4269e/EN/x86/MsSqlCmdLnUtils.msi";
-    var link64 = "https://download.microsoft.com/download/0/e/6/0e63d835-3513-45a0-9cf0-0bc75fb4269e/EN/x64/MsSqlCmdLnUtils.msi";
+    var version = "15.0.4298.1";
+    var link32 = "https://download.microsoft.com/download/a/a/4/aa47b3b0-9f67-441d-8b00-e74cd845ea9f/EN/x86/MsSqlCmdLnUtils.msi";
+    var link64 = "https://download.microsoft.com/download/a/a/4/aa47b3b0-9f67-441d-8b00-e74cd845ea9f/EN/x64/MsSqlCmdLnUtils.msi";
     var hash32 = GetOnlineFileHash(link32);
     var hash64 = GetOnlineFileHash(link64);
     
