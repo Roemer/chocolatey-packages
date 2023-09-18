@@ -72,7 +72,7 @@ Task("Pack-SonarQube-Scanner")
     .IsDependentOn("Clean-Output")
     .Does(() =>
 {
-    var version = "4.8.1.3023";
+    var version = "5.0.1.3006";
 
     var packageName = "sonarqube-scanner.portable";
     var hash = GetOnlineFileHash($"https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-{version}-windows.zip");
