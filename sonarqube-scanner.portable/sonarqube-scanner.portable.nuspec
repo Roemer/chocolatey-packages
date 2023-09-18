@@ -9,7 +9,7 @@
     <description>Official SonarQube Scanner used to start code analysis.</description>
     <projectUrl>http://www.sonarqube.org/</projectUrl>
     <projectSourceUrl>https://github.com/SonarSource/sonar-scanner-cli</projectSourceUrl>
-    <docsUrl>http://docs.sonarqube.org/display/SONAR/Analyzing+with+SonarQube+Scanner</docsUrl>
+    <docsUrl>https://docs.sonarsource.com/sonarqube/latest/analyzing-source-code/scanners/sonarscanner</docsUrl>
     <bugTrackerUrl>http://jira.sonarsource.com/browse/SQSCANNER</bugTrackerUrl>
     <copyright>2008-{year}, SonarSource S.A, Switzerland</copyright>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
