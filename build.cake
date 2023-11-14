@@ -136,6 +136,7 @@ Task("Push-Packages")
     foreach (var package in files) {
         Information($"Pushing {package}");
         ChocolateyPush(package, new ChocolateyPushSettings {
+            Source ="https://push.chocolatey.org/",
             ApiKey = apiKey
         });
     }
