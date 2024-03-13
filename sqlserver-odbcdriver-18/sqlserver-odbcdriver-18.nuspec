@@ -2,17 +2,13 @@
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
-    <id>sqlserver-odbcdriver</id>
+    <id>sqlserver-odbcdriver-18</id>
     <version>{version}</version>
-    <title>Microsoft® ODBC Driver for SQL Server®</title>
+    <title>Microsoft® ODBC Driver 18 for SQL Server®</title>
     <summary>Microsoft ODBC Driver for SQL Server is a single dynamic-link library (DLL) containing run-time support for applications using native-code APIs to connect to SQL Server.</summary>
-    <description>
-The Microsoft ODBC Drivers for SQL Server are stand-alone ODBC drivers which provide an application programming interface (API) implementing the standard ODBC interfaces to Microsoft SQL Server.
+    <description>The Microsoft ODBC Drivers for SQL Server are stand-alone ODBC drivers which provide an application programming interface (API) implementing the standard ODBC interfaces to Microsoft SQL Server.
 
-The Microsoft ODBC Driver for SQL Server can be used to create new applications. You can also upgrade your older applications which currently use an older ODBC driver. The ODBC Driver for SQL Server supports connections to Azure SQL Database, Azure Synapse Analytics, and SQL Server.
-
-This is a *metapackage*, which installs the latest release across all versions.
-</description>
+The Microsoft ODBC Driver for SQL Server can be used to create new applications. You can also upgrade your older applications which currently use an older ODBC driver. The ODBC Driver for SQL Server supports connections to Azure SQL Database, Azure Synapse Analytics, and SQL Server.</description>
     <projectUrl>https://learn.microsoft.com/en-us/sql/connect/odbc/microsoft-odbc-driver-for-sql-server</projectUrl>
     <releaseNotes>See https://learn.microsoft.com/en-us/sql/connect/odbc/windows/release-notes-odbc-sql-server-windows.</releaseNotes>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -21,7 +17,10 @@ This is a *metapackage*, which installs the latest release across all versions.
     <tags>sqlserver sql odbc driver admin</tags>
     <packageSourceUrl>https://github.com/Roemer/chocolatey-packages</packageSourceUrl>
     <dependencies>
-      <dependency id="sqlserver-odbcdriver-18" />
+      <dependency id="vcredist2017" />
     </dependencies>
   </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
 </package>

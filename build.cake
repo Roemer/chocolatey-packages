@@ -88,20 +88,43 @@ Task("Pack-SqlServer-ODBC")
     .IsDependentOn("Clean-Output")
     .Does(() =>
 {
-    // see https://learn.microsoft.com/en-us/sql/connect/odbc/download-odbc-driver-for-sql-server?view=sql-server-ver16
-    var version = "18.3.2.1";
-    var link32 = "https://download.microsoft.com/download/4/f/e/4fed6f4b-dc42-4255-b4b4-70f8e2a35a63/en-US/18.3.2.1/x86/msodbcsql.msi";
-    var link64 = "https://download.microsoft.com/download/4/f/e/4fed6f4b-dc42-4255-b4b4-70f8e2a35a63/en-US/18.3.2.1/x64/msodbcsql.msi";
-    var hash32 = GetOnlineFileHash(link32);
-    var hash64 = GetOnlineFileHash(link64);
+    // V17
+    var version_17 = "17.10.5.1";
+    var link32_17 = "https://download.microsoft.com/download/6/f/f/6ffefc73-39ab-4cc0-bb7c-4093d64c2669/en-US/17.10.5.1/x86/msodbcsql.msi";
+    var link64_17 = "https://download.microsoft.com/download/6/f/f/6ffefc73-39ab-4cc0-bb7c-4093d64c2669/en-US/17.10.5.1/x64/msodbcsql.msi";
+    var hash32_17 = GetOnlineFileHash(link32_17);
+    var hash64_17 = GetOnlineFileHash(link64_17);
+    var packageName_17 = "sqlserver-odbcdriver-17";
+    ReplaceInFiles(packageName_17, new Dictionary<string, string> {
+        ["{version}"] = version_17,
+        ["{link32}"] = link32_17,
+        ["{link64}"] = link64_17,
+        ["{checksum32}"] = hash32_17,
+        ["{checksum64}"] = hash64_17
+    });
+    ChocolateyPack($"./{packageName_17}/{packageName_17}.nuspec", chocolateyPackSettings);
 
+    // V18
+    var version_18 = "18.3.2.1";
+    var link32_18 = "https://download.microsoft.com/download/4/f/e/4fed6f4b-dc42-4255-b4b4-70f8e2a35a63/en-US/18.3.2.1/x86/msodbcsql.msi";
+    var link64_18 = "https://download.microsoft.com/download/4/f/e/4fed6f4b-dc42-4255-b4b4-70f8e2a35a63/en-US/18.3.2.1/x64/msodbcsql.msi";
+    var hash32_18 = GetOnlineFileHash(link32_18);
+    var hash64_18 = GetOnlineFileHash(link64_18);
+    var packageName_18 = "sqlserver-odbcdriver-18";
+    ReplaceInFiles(packageName_18, new Dictionary<string, string> {
+        ["{version}"] = version_18,
+        ["{link32}"] = link32_18,
+        ["{link64}"] = link64_18,
+        ["{checksum32}"] = hash32_18,
+        ["{checksum64}"] = hash64_18
+    });
+    ChocolateyPack($"./{packageName_18}/{packageName_18}.nuspec", chocolateyPackSettings);
+
+    // Meta Package
+    var version = "18.3.2.1";
     var packageName = "sqlserver-odbcdriver";
     ReplaceInFiles(packageName, new Dictionary<string, string> {
-        ["{version}"] = version,
-        ["{link32}"] = link32,
-        ["{link64}"] = link64,
-        ["{checksum32}"] = hash32,
-        ["{checksum64}"] = hash64
+        ["{version}"] = version
     });
     ChocolateyPack($"./{packageName}/{packageName}.nuspec", chocolateyPackSettings);
 });
