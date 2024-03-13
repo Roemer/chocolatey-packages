@@ -25,4 +25,6 @@ if ($updateNeeded) {
         -ChecksumType $checksumType `
         -Checksum64 $checksum64 `
         -ChecksumType64 $checksumType
+} else {
+    Write-Warning "Package not installed as the odbc driver is already present. Use --force to force the a re-installation."
 }
