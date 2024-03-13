@@ -24,4 +24,5 @@ This is a *metapackage*, which installs the latest release across all versions.
       <dependency id="sqlserver-odbcdriver-18" />
     </dependencies>
   </metadata>
+  <files />
 </package>
