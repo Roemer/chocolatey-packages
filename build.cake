@@ -89,9 +89,9 @@ Task("Pack-SqlServer-ODBC")
     .Does(() =>
 {
     // V17
-    var version_17 = "17.10.5.1";
-    var link32_17 = "https://download.microsoft.com/download/6/f/f/6ffefc73-39ab-4cc0-bb7c-4093d64c2669/en-US/17.10.5.1/x86/msodbcsql.msi";
-    var link64_17 = "https://download.microsoft.com/download/6/f/f/6ffefc73-39ab-4cc0-bb7c-4093d64c2669/en-US/17.10.5.1/x64/msodbcsql.msi";
+    var version_17 = "17.10.6.1";
+    var link32_17 = "https://download.microsoft.com/download/6/f/f/6ffefc73-39ab-4cc0-bb7c-4093d64c2669/en-US/17.10.6.1/x86/msodbcsql.msi";
+    var link64_17 = "https://download.microsoft.com/download/6/f/f/6ffefc73-39ab-4cc0-bb7c-4093d64c2669/en-US/17.10.6.1/x64/msodbcsql.msi";
     var hash32_17 = GetOnlineFileHash(link32_17);
     var hash64_17 = GetOnlineFileHash(link64_17);
     var packageName_17 = "sqlserver-odbcdriver-17";
@@ -105,9 +105,9 @@ Task("Pack-SqlServer-ODBC")
     ChocolateyPack($"./{packageName_17}/{packageName_17}.nuspec", chocolateyPackSettings);
 
     // V18
-    var version_18 = "18.3.2.1";
-    var link32_18 = "https://download.microsoft.com/download/4/f/e/4fed6f4b-dc42-4255-b4b4-70f8e2a35a63/en-US/18.3.2.1/x86/msodbcsql.msi";
-    var link64_18 = "https://download.microsoft.com/download/4/f/e/4fed6f4b-dc42-4255-b4b4-70f8e2a35a63/en-US/18.3.2.1/x64/msodbcsql.msi";
+    var version_18 = "18.3.3.1";
+    var link32_18 = "https://download.microsoft.com/download/4/f/e/4fed6f4b-dc42-4255-b4b4-70f8e2a35a63/en-US/18.3.3.1/x86/msodbcsql.msi";
+    var link64_18 = "https://download.microsoft.com/download/4/f/e/4fed6f4b-dc42-4255-b4b4-70f8e2a35a63/en-US/18.3.3.1/x64/msodbcsql.msi";
     var hash32_18 = GetOnlineFileHash(link32_18);
     var hash64_18 = GetOnlineFileHash(link64_18);
     var packageName_18 = "sqlserver-odbcdriver-18";
