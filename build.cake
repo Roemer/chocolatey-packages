@@ -121,7 +121,7 @@ Task("Pack-SqlServer-ODBC")
     ChocolateyPack($"./{packageName_18}/{packageName_18}.nuspec", chocolateyPackSettings);
 
     // Meta Package
-    var version = "18.3.2.1";
+    var version = "18.3.3.1";
     var packageName = "sqlserver-odbcdriver";
     ReplaceInFiles(packageName, new Dictionary<string, string> {
         ["{version}"] = version
