@@ -34,7 +34,7 @@ Task("Pack-Flyway")
     .IsDependentOn("Clean-Output")
     .Does(() =>
 {
-    var version = "10.9.1";
+    var version = "10.17.0";
 
     // Handle the file without jre
     {
@@ -72,10 +72,10 @@ Task("Pack-SonarQube-Scanner")
     .IsDependentOn("Clean-Output")
     .Does(() =>
 {
-    var version = "5.0.1.3006";
+    var version = "6.1.0.4477";
 
     var packageName = "sonarqube-scanner.portable";
-    var hash = GetOnlineFileHash($"https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-{version}-windows.zip");
+    var hash = GetOnlineFileHash($"https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-{version}-windows-x64.zip");
     ReplaceInFiles(packageName, new Dictionary<string, string> {
         ["{version}"] = version,
         ["{checksum}"] = hash,
@@ -89,9 +89,9 @@ Task("Pack-SqlServer-ODBC")
     .Does(() =>
 {
     // V17
-    var version_17 = "17.10.5.1";
-    var link32_17 = "https://download.microsoft.com/download/6/f/f/6ffefc73-39ab-4cc0-bb7c-4093d64c2669/en-US/17.10.5.1/x86/msodbcsql.msi";
-    var link64_17 = "https://download.microsoft.com/download/6/f/f/6ffefc73-39ab-4cc0-bb7c-4093d64c2669/en-US/17.10.5.1/x64/msodbcsql.msi";
+    var version_17 = "17.10.6.1";
+    var link32_17 = $"https://download.microsoft.com/download/6/f/f/6ffefc73-39ab-4cc0-bb7c-4093d64c2669/en-US/{version_17}/x86/msodbcsql.msi";
+    var link64_17 = $"https://download.microsoft.com/download/6/f/f/6ffefc73-39ab-4cc0-bb7c-4093d64c2669/en-US/{version_17}/x64/msodbcsql.msi";
     var hash32_17 = GetOnlineFileHash(link32_17);
     var hash64_17 = GetOnlineFileHash(link64_17);
     var packageName_17 = "sqlserver-odbcdriver-17";
@@ -105,9 +105,9 @@ Task("Pack-SqlServer-ODBC")
     ChocolateyPack($"./{packageName_17}/{packageName_17}.nuspec", chocolateyPackSettings);
 
     // V18
-    var version_18 = "18.3.2.1";
-    var link32_18 = "https://download.microsoft.com/download/4/f/e/4fed6f4b-dc42-4255-b4b4-70f8e2a35a63/en-US/18.3.2.1/x86/msodbcsql.msi";
-    var link64_18 = "https://download.microsoft.com/download/4/f/e/4fed6f4b-dc42-4255-b4b4-70f8e2a35a63/en-US/18.3.2.1/x64/msodbcsql.msi";
+    var version_18 = "18.4.1.1";
+    var link32_18 = "https://download.microsoft.com/download/1/7/4/17423b83-b75d-42e1-b5b9-eaa266561c5e/Windows/x86/1031/msodbcsql.msi";
+    var link64_18 = "https://download.microsoft.com/download/1/7/4/17423b83-b75d-42e1-b5b9-eaa266561c5e/Windows/amd64/1031/msodbcsql.msi";
     var hash32_18 = GetOnlineFileHash(link32_18);
     var hash64_18 = GetOnlineFileHash(link64_18);
     var packageName_18 = "sqlserver-odbcdriver-18";
@@ -121,7 +121,7 @@ Task("Pack-SqlServer-ODBC")
     ChocolateyPack($"./{packageName_18}/{packageName_18}.nuspec", chocolateyPackSettings);
 
     // Meta Package
-    var version = "18.3.2.1";
+    var version = version_18;
     var packageName = "sqlserver-odbcdriver";
     ReplaceInFiles(packageName, new Dictionary<string, string> {
         ["{version}"] = version
@@ -138,7 +138,7 @@ Task("Pack-SqlServer-Sqlcmd")
     var link64 = "https://download.microsoft.com/download/a/a/4/aa47b3b0-9f67-441d-8b00-e74cd845ea9f/EN/x64/MsSqlCmdLnUtils.msi";
     var hash32 = GetOnlineFileHash(link32);
     var hash64 = GetOnlineFileHash(link64);
-    
+
     var packageName = "sqlserver-cmdlineutils";
     ReplaceInFiles(packageName, new Dictionary<string, string> {
         ["{version}"] = version,
