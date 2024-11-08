@@ -34,7 +34,7 @@ Task("Pack-Flyway")
     .IsDependentOn("Clean-Output")
     .Does(() =>
 {
-    var version = "10.17.0";
+    var version = "10.21.0";
 
     // Handle the file without jre
     {
@@ -72,7 +72,7 @@ Task("Pack-SonarQube-Scanner")
     .IsDependentOn("Clean-Output")
     .Does(() =>
 {
-    var version = "6.1.0.4477";
+    var version = "6.2.1.4610";
 
     var packageName = "sonarqube-scanner.portable";
     var hash = GetOnlineFileHash($"https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-{version}-windows-x64.zip");
@@ -133,7 +133,7 @@ Task("Pack-SqlServer-Sqlcmd")
     .IsDependentOn("Clean-Output")
     .Does(() =>
 {
-    var version = "15.0.4298.1";
+    var version = "15.0.4298.100";
     var link32 = "https://download.microsoft.com/download/a/a/4/aa47b3b0-9f67-441d-8b00-e74cd845ea9f/EN/x86/MsSqlCmdLnUtils.msi";
     var link64 = "https://download.microsoft.com/download/a/a/4/aa47b3b0-9f67-441d-8b00-e74cd845ea9f/EN/x64/MsSqlCmdLnUtils.msi";
     var hash32 = GetOnlineFileHash(link32);

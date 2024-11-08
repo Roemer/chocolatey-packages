@@ -14,7 +14,7 @@
     <tags>sqlserver sql sqlcmd commandline utilities</tags>
     <packageSourceUrl>https://github.com/Roemer/chocolatey-packages</packageSourceUrl>
     <dependencies>
-      <dependency id="sqlserver-odbcdriver" version="17.5.2.1" />
+      <dependency id="sqlserver-odbcdriver-17" />
     </dependencies>
   </metadata>
   <files>
