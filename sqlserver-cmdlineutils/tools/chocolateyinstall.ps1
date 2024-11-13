@@ -6,4 +6,14 @@ $url64 = '{link64}'
 $checksumType = 'sha256'
 $checksum = '{checksum32}'
 $checksum64 = '{checksum64}'
-Install-ChocolateyPackage "$packageName" "$installerType" "$silentArgs" "$url" "$url64" -validExitCodes @(0) "$checksum" "$checksumType" "$checksum64" "$checksumType"
+
+Install-ChocolateyPackage -PackageName "$packageName" `
+    -FileType "$installerType" `
+    -SilentArgs "$silentArgs" `
+    -Url "$url" `
+    -Url64bit "$url64" `
+    -Checksum "$checksum" `
+    -ChecksumType "$checksumType" `
+    -Checksum64 "$checksum64" `
+    -ChecksumType64 "$checksumType" `
+    -validExitCodes @(0)
